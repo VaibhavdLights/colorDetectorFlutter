@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -25,6 +26,58 @@ class _HomePageState extends State<HomePage> {
               color: Colors.black,
             ),
           ]),
+      body: Column(
+        children: [
+          GestureDetector(
+            onTap: () {},
+            child: Container(
+              height: 100,
+              width: context.screenWidth,
+              color: Colors.red,
+            ),
+          ).expand(),
+          GestureDetector(
+            onTap: () {},
+            child: Container(
+              height: 100,
+              width: context.screenWidth,
+              color: Colors.blueAccent,
+            ),
+          ).expand(),
+          GestureDetector(
+            onTap: () {},
+            child: Container(
+              height: 100,
+              width: context.screenWidth,
+              color: Colors.green,
+            ),
+          ).expand(),
+          GestureDetector(
+            onTap: () {},
+            child: Container(
+              height: 100,
+              width: context.screenWidth,
+              color: Colors.orange,
+            ),
+          ).expand(),
+          GestureDetector(
+            onTap: () {},
+            child: Container(
+              height: 100,
+              width: context.screenWidth,
+              color: Colors.purple,
+            ),
+          ).expand(),
+          GestureDetector(
+            onTap: () {},
+            child: Container(
+              height: 100,
+              width: context.screenWidth,
+              color: Colors.yellow,
+            ),
+          ).expand(),
+        ],
+      ),
     );
   }
 }
