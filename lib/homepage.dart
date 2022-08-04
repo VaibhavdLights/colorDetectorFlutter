@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_tts/flutter_tts.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class HomePage extends StatefulWidget {
@@ -9,6 +10,13 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final FlutterTts flutterTts = FlutterTts();
+  speak(String text) async {
+    await flutterTts.setLanguage("en-IN");
+    await flutterTts.setPitch(1.0);
+    await flutterTts.speak(text);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,51 +45,117 @@ class _HomePageState extends State<HomePage> {
       body: Column(
         children: [
           GestureDetector(
-            onTap: () {},
+            onTap: () {
+              ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                content: Text("Color : Red"),
+                behavior: SnackBarBehavior.floating,
+                elevation: 6.0,
+              ));
+            },
+            onDoubleTap: () {
+              speak("This Color is. Red");
+            },
             child: Container(
+              alignment: Alignment.center,
               height: 100,
               width: context.screenWidth,
-              color: Colors.red,
+              color: Vx.red800,
+              child: "Tap/Double Tap Here".text.make(),
             ),
           ).expand(),
           GestureDetector(
-            onTap: () {},
+            onTap: () {
+              ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                content: Text("Color : Blue"),
+                behavior: SnackBarBehavior.floating,
+                elevation: 6.0,
+              ));
+            },
+            onDoubleTap: () {
+              speak("This Color is. Blue");
+            },
             child: Container(
+              alignment: Alignment.center,
               height: 100,
               width: context.screenWidth,
-              color: Colors.blueAccent,
+              color: Vx.blue800,
+              child: "Tap/Double Tap Here".text.make(),
             ),
           ).expand(),
           GestureDetector(
-            onTap: () {},
+            onTap: () {
+              ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                content: Text("Color : Green"),
+                behavior: SnackBarBehavior.floating,
+                elevation: 6.0,
+              ));
+            },
+            onDoubleTap: () {
+              speak("This Color is. Green");
+            },
             child: Container(
+              alignment: Alignment.center,
               height: 100,
               width: context.screenWidth,
-              color: Colors.green,
+              color: Vx.green700,
+              child: "Tap/Double Tap Here".text.make(),
             ),
           ).expand(),
           GestureDetector(
-            onTap: () {},
+            onTap: () {
+              ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                content: Text("Color : Orange"),
+                behavior: SnackBarBehavior.floating,
+                elevation: 6.0,
+              ));
+            },
+            onDoubleTap: () {
+              speak("This Color is. Orange");
+            },
             child: Container(
+              alignment: Alignment.center,
               height: 100,
               width: context.screenWidth,
-              color: Colors.orange,
+              color: Vx.orange500,
+              child: "Tap/Double Tap Here".text.make(),
             ),
           ).expand(),
           GestureDetector(
-            onTap: () {},
+            onTap: () {
+              ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                content: Text("Color : Purple"),
+                behavior: SnackBarBehavior.floating,
+                elevation: 6.0,
+              ));
+            },
+            onDoubleTap: () {
+              speak("This Color is. Purple");
+            },
             child: Container(
+              alignment: Alignment.center,
               height: 100,
               width: context.screenWidth,
-              color: Colors.purple,
+              color: Vx.purple700,
+              child: "Tap/Double Tap Here".text.make(),
             ),
           ).expand(),
           GestureDetector(
-            onTap: () {},
+            onTap: () {
+              ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                content: Text("Color : Yellow"),
+                behavior: SnackBarBehavior.floating,
+                elevation: 6.0,
+              ));
+            },
+            onDoubleTap: () {
+              speak("This Color is. Yellow");
+            },
             child: Container(
+              alignment: Alignment.center,
               height: 100,
               width: context.screenWidth,
-              color: Colors.yellow,
+              color: Vx.yellow400,
+              child: "Tap/Double Tap Here".text.make(),
             ),
           ).expand(),
         ],
