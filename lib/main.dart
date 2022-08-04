@@ -1,5 +1,6 @@
 import 'package:color_detector/about_page.dart';
 import 'package:color_detector/homepage.dart';
+import 'package:color_detector/utils/themes.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,6 +13,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      themeMode: ThemeMode.system,
+      theme: MyTheme.lightTheme(context),
+      darkTheme: MyTheme.darkTheme(context),
       debugShowCheckedModeBanner: false,
       home: const HomePage(),
       routes: {

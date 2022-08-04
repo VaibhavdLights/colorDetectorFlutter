@@ -13,17 +13,25 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: const Text(
-            "Color Detector",
-            style: TextStyle(color: Colors.black),
-          ),
+          iconTheme: const IconThemeData(),
+          title: "Color Detector".text.semiBold.xl.make(),
           elevation: 0.0,
           backgroundColor: Colors.transparent,
           actions: [
             IconButton(
+                onPressed: () {
+                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                    content: Text("Coming Soon"),
+                    behavior: SnackBarBehavior.floating,
+                    elevation: 6.0,
+                  ));
+                },
+                icon: const Icon(Icons.camera_alt)),
+            IconButton(
               icon: const Icon(Icons.info),
-              onPressed: () {},
-              color: Colors.black,
+              onPressed: () {
+                Navigator.pushNamed(context, '/about');
+              },
             ),
           ]),
       body: Column(
